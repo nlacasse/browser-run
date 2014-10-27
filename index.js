@@ -58,8 +58,9 @@ function runner (opts) {
         if (err) console.error(err), process.exit(1);
 
         launch('http://localhost:' + port, {
-          headless: false,
-          browser: opts.browser
+          browser: opts.browser,
+          headless: opts.headless,
+          options: opts.options
         }, function (err, _ps) {
           if (err) console.error(err), process.exit(1);
 
